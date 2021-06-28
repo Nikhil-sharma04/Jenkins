@@ -13,7 +13,7 @@ git credentialsId:'gitnagarro',url:'https://git.nagarro.com/GITG00641/Java/31667
 stage('Build') 
 { 
 steps {
-        sh 'mvn clean install' 
+       bat 'mvn -f EmployeeManagement/pom.xml clean install'
      }
 }
 }
