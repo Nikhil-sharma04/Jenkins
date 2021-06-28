@@ -1,0 +1,20 @@
+pipeline{
+agent any
+tools{
+maven "MAVEN_HOME"
+jdk "JAVA_HOME"
+}
+stages{
+stage('git'){
+steps{
+git credentialsId:'gitnagarro',url:'https://git.nagarro.com/GITG00641/Java/3166777.git'
+}
+}
+stage('Build') 
+{ 
+steps {
+        sh 'mvn clean install' 
+     }
+}
+}
+}
